@@ -1,3 +1,3 @@
 # RedCLARA
 
-![Screenshot](rede.jpg)
+![Screenshot](./rede.jpg?raw=true "RedCLARA")

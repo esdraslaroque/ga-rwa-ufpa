@@ -1,3 +1,3 @@
 # Janet 
 
-![Screenshot](rede.jpg)
+![Screenshot](./rede.jpg?raw=true "Janet")

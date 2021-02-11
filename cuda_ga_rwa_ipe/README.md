@@ -1,3 +1,3 @@
 # Ipe 
 
-![Screenshot](rede.jpg)
+![Screenshot](./rede.jpg?raw=true "Ipe")
