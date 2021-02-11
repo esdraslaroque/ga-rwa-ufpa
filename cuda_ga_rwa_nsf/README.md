@@ -1,3 +1,3 @@
 # NSF
 
-![Screenshot](rede.jpg)
+![Screenshot](./rede.jpg?raw=true "NSF")
