@@ -30,7 +30,7 @@
 #define NSF_SRC_NODE		0 	// source node
 #define NSF_DST_NODE		18	// destination node
 #define NSF_NUM_NODES		28 	// number of nodes on NSF network
-#define NSF_NUM_EDGES		78 	// number of edges on NSF graph
+#define NSF_NUM_EDGES		79 	// number of edges on NSF graph
 #define NSF_NUM_CHANNELS	8
 
 #define FIELDS	2

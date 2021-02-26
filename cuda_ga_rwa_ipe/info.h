@@ -27,10 +27,10 @@
 
 /* NSF Parameters */
 #define NSF_SRC_NODE		0 	// source node
-#define NSF_DST_NODE		18	// destination node
-#define NSF_NUM_NODES		28 	// number of nodes on NSF network
-#define NSF_NUM_EDGES		40 	// number of edges on NSF graph
-#define NSF_NUM_CHANNELS	4
+#define NSF_DST_NODE		6	// destination node
+#define NSF_NUM_NODES		7 	// number of nodes on NSF network
+#define NSF_NUM_EDGES		79 	// number of edges on NSF graph
+#define NSF_NUM_CHANNELS	8
 
 #define FIELDS	2
 //#define NODE_VISITED		0
@@ -40,7 +40,7 @@
 #define GA_SIZE_POP		30 	// size of population of each species
 
 #define GA_MIN_GEN		35 	// min number of generations
-#define GA_MAX_GEN		80 	// max number of generations 
+#define GA_MAX_GEN		80 	// max number of generations
 
 #define GA_MIN_CROSS_RATE	0.15 	// min crossover rate
 #define GA_MAX_CROSS_RATE	40 	// max crossover rate
@@ -49,4 +49,3 @@
 #define GA_MAX_MUT_RATE		20 	// max mutation rate
 
 #define GA_GEN_INTERVAL		8 	// interval to update rates
-
