@@ -3,7 +3,7 @@
 
 CC	= nvcc
 #CFLAGS	= -O2 -arch=sm_21 -I/home/esdras/NVIDIA_CUDA-8.0_Samples/common/inc/
-#CFLAGS	= -arch=sm_21 -Wno-deprecated-gpu-targets -O2 -I/home/esdras/NVIDIA_CUDA-8.0_Samples/common/inc/
+CFLAGS	= -arch=sm_21 -Wno-deprecated-gpu-targets -O2 -I/home/esdras/NVIDIA_CUDA-8.0_Samples/common/inc/
 LIBS	= -lm -lcurand
 DEPS	= info.h
 OBJ	= main.o nsf.o rwa.o curand.o
