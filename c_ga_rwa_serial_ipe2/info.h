@@ -23,7 +23,7 @@
 
 #define SIM_NUM_GEN		150
 #define SIM_MIN_LOAD		1
-#define SIM_MAX_LOAD		31
+#define SIM_MAX_LOAD		65
 #define SIM_RAND_MAX		9000
 
 /* NSF Parameters */

@@ -31,7 +31,7 @@
 #define NSF_DST_NODE		12	// destination node
 #define NSF_NUM_NODES		14 	// number of nodes on NSF network
 #define NSF_NUM_EDGES		40 	// number of edges on NSF graph
-#define NSF_NUM_CHANNELS	4
+#define NSF_NUM_CHANNELS	8
 
 #define FIELDS	2
 //#define NODE_VISITED		0
