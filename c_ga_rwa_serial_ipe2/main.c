@@ -84,7 +84,7 @@ int main (void)
         addLink (verts, edges, 22, 23, (rand() % (1<<NSF_NUM_CHANNELS)), NSF_NUM_CHANNELS, &E, 2);
         addLink (verts, edges, 24, 25, (rand() % (1<<NSF_NUM_CHANNELS)), NSF_NUM_CHANNELS, &E, 2);
         addLink (verts, edges, 25, 26, (rand() % (1<<NSF_NUM_CHANNELS)), NSF_NUM_CHANNELS, &E, 2);
-        addLink (verts, edges, 26, 27, (rand() % (1<<NSF_NUM_CHANNELS)), NSF_NUM_CHANNELS, &E, 2);	
+        addLink (verts, edges, 26, 27, (rand() % (1<<NSF_NUM_CHANNELS)), NSF_NUM_CHANNELS, &E, 2);
 
 	t = clock();
 	int count_bp;
@@ -280,6 +280,6 @@ int main (void)
 	double time_taken = ((double) t)/CLOCKS_PER_SEC;
 
 	printf ("Time taken: %.2f\n", time_taken);
-
+	
 	return EXIT_SUCCESS;
 }
