@@ -30,7 +30,7 @@ NSF_SOURCE_NODE   = 3  # source
 NSF_DEST_NODE     = 11 # destination node
 NSF_NUM_NODES     = 28 # number of nodes on NSF network
 
-NSF_NUM_CHANNELS  = 4      # total number of wavelengths available
+NSF_NUM_CHANNELS  = 8      # total number of wavelengths available
 NSF_CHANNEL_FREE  = False  # init all link wavelengths available at once?
 
 # Genetic Algorithm Parameters
