@@ -20,12 +20,13 @@
 # Assignment (RWA) in Optical Networks
 
 import sys
-
+import time
 import info
 import nsf
 
 import numpy as np
 
+inicio = time.time()
 from rwa_ga import rwa_ga
 
 def get_wave_availability(k, n):
@@ -77,7 +78,9 @@ if __name__ == '__main__':
 
 	if info.DEBUG:
 		print '\tGA:  ', blocked_ga
-	
+		
+	fim = time.time()
+	print(inicio - fim)
 	with open('GA_ps%d_tc%.2f_tm%.2f_ch%d.m' % (popsize, Tc, Tm, info.NSF_NUM_CHANNELS), 'a') as f:
 		for bp in blocked_ga:
 			f.write('%2.2f ' % bp)

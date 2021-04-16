@@ -23,8 +23,11 @@ import sys
 
 import info
 import nsf
+import time
 
 import numpy as np
+
+inicio = time.time()
 
 from rwa_ga import rwa_ga
 
@@ -80,7 +83,8 @@ if __name__ == '__main__':
 	
 				if info.DEBUG:
 					print '\tGA:  ', blocked_ga
-				
+				fim = time.time()
+				print 'time:',(fim - inicio)
 				with open('GA_ps%d_tc%.2f_tm%.2f_ch%d.m' % (popsize, Tc, Tm, info.NSF_NUM_CHANNELS), 'a') as f:
 					for bp in blocked_ga:
 						f.write('%2.2f ' % bp)
