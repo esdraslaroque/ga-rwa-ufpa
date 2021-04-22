@@ -56,7 +56,7 @@ int main (void)
 	addLink (verts, edges, 3, 4, (rand() % (1<<NSF_NUM_CHANNELS)), NSF_NUM_CHANNELS, &E, 2);
 	addLink (verts, edges, 3, 6, (rand() % (1<<NSF_NUM_CHANNELS)), NSF_NUM_CHANNELS, &E, 2);
 	addLink (verts, edges, 4, 5, (rand() % (1<<NSF_NUM_CHANNELS)), NSF_NUM_CHANNELS, &E, 2);
-	addLink (verts, edges, 5, 6, (rand() % (1<<NSF_NUM_CHANNELS)), NSF_NUM_CHANNELS, &E, 2);
+	//addLink (verts, edges, 5, 6, (rand() % (1<<NSF_NUM_CHANNELS)), NSF_NUM_CHANNELS, &E, 2);
 	addLink (verts, edges, 6, 7, (rand() % (1<<NSF_NUM_CHANNELS)), NSF_NUM_CHANNELS, &E, 2);
 	addLink (verts, edges, 7, 8, (rand() % (1<<NSF_NUM_CHANNELS)), NSF_NUM_CHANNELS, &E, 2);
 	addLink (verts, edges, 7, 10, (rand() % (1<<NSF_NUM_CHANNELS)), NSF_NUM_CHANNELS, &E, 2);
