@@ -15,7 +15,7 @@
  * Authors: April 2017
  * Cassio Trindade Batista - cassio.batista.13@gmail.com
 */
-//#include <helper_cuda.h>
+#include <helper_cuda.h>
 #include <stdio.h>
 #include <stdlib.h>
 #include <time.h>
@@ -176,7 +176,7 @@ __global__ void rwa (struct Vertice *d_verts, struct Edge *d_edges)
 	
 	//d_printNsf (verts, edges, 0); 
 	//if (myId == 0) printf ("until_next: %2f\tholding_time: %2f\n", until_next, holding_time);
-
+/*
         if (threadIdx.x == 0 && blockIdx.x == 127) {
 		float bp = 0.0;
 		for (int i = 0; i < SIM_MAX_LOAD-1; i++) {
@@ -187,7 +187,7 @@ __global__ void rwa (struct Vertice *d_verts, struct Edge *d_edges)
               		printf ("%.1f\n", bp);
 		}
         }
-
+*/
 	if (myId == stride-1) printf ("\nblockDim.x: %d\ngridDim.x: %d\nstride: %d\n\n", blockDim.x, gridDim.x, stride);
 }
 
@@ -212,15 +212,13 @@ int main (void)
 	struct Vertice *d_verts;
 	struct Edge *d_edges;
 
-	//checkCudaErrors( cudaMalloc ((void**)&d_verts, NSF_NUM_NODES * sizeof(struct Vertice)) );
-	//checkCudaErrors( cudaMalloc ((void**)&d_edges, NSF_NUM_EDGES*(SIM_MAX_LOAD-1) * sizeof(struct Edge)) );
-	cudaMalloc ((void**)&d_verts, NSF_NUM_NODES * sizeof(struct Vertice));
-	cudaMalloc ((void**)&d_edges, NSF_NUM_EDGES*(SIM_MAX_LOAD-1) * sizeof(struct Edge));
+	checkCudaErrors( cudaMalloc ((void**)&d_verts, NSF_NUM_NODES * sizeof(struct Vertice)) );
+	checkCudaErrors( cudaMalloc ((void**)&d_edges, NSF_NUM_EDGES*(SIM_MAX_LOAD-1) * sizeof(struct Edge)) );
+
 	srand ((unsigned) time(NULL));
 
 	// 20 uplinks in GPU memory
 	int E = 0;
-	
         addLink (verts, edges, 0, 1, (rand() % (1<<NSF_NUM_CHANNELS)), NSF_NUM_CHANNELS, &E, 2);
 	addLink (verts, edges, 0, 2, (rand() % (1<<NSF_NUM_CHANNELS)), NSF_NUM_CHANNELS, &E, 2);
 	addLink (verts, edges, 0, 3, (rand() % (1<<NSF_NUM_CHANNELS)), NSF_NUM_CHANNELS, &E, 2);
@@ -279,11 +277,9 @@ int main (void)
 	//	printf (")\n");
 	//}
 
-	//checkCudaErrors( cudaMemcpy (d_verts, verts, NSF_NUM_NODES * sizeof(struct Vertice), cudaMemcpyHostToDevice) );
-	//checkCudaErrors( cudaMemcpy (d_edges, edges, (NSF_NUM_EDGES*(SIM_MAX_LOAD-1)) * sizeof(struct Edge), cudaMemcpyHostToDevice) );
-	
-	cudaMemcpy (d_verts, verts, NSF_NUM_NODES * sizeof(struct Vertice), cudaMemcpyHostToDevice);
-        cudaMemcpy (d_edges, edges, (NSF_NUM_EDGES*(SIM_MAX_LOAD-1)) * sizeof(struct Edge), cudaMemcpyHostToDevice) ;
+	checkCudaErrors( cudaMemcpy (d_verts, verts, NSF_NUM_NODES * sizeof(struct Vertice), cudaMemcpyHostToDevice) );
+	checkCudaErrors( cudaMemcpy (d_edges, edges, (NSF_NUM_EDGES*(SIM_MAX_LOAD-1)) * sizeof(struct Edge), cudaMemcpyHostToDevice) );
+
 	t = clock();
 	//v1: rwa <<<(SIM_MAX_LOAD-1),SIM_NUM_GEN>>>(d_verts, d_edges, d_erlangs);
 	rwa <<<SIM_NUM_GEN,(SIM_MAX_LOAD-1)>>>(d_verts, d_edges);
