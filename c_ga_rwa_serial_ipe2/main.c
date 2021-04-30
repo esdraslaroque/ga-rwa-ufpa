@@ -271,7 +271,7 @@ int main (void)
 		//if (load == 1) printNsf(verts, edges);
 		//break;
 		float bp = 100.0 * (count_bp/(float)SIM_NUM_GEN);
-		printf ("%.1f\n", bp);
+		printf ("%.1f ", bp);
 		//printf ("Block Probability [Erlang %2d]: %.1f%%\n", load, bp);
 		//printf ("Blocked: %d\nBlock Probability: %.1f%%\n", count_bp, bp);
 	} // SIM_MAX_LOAD

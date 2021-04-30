@@ -176,7 +176,7 @@ __global__ void rwa (struct Vertice *d_verts, struct Edge *d_edges)
 	
 	//d_printNsf (verts, edges, 0); 
 	//if (myId == 0) printf ("until_next: %2f\tholding_time: %2f\n", until_next, holding_time);
-/*
+
         if (threadIdx.x == 0 && blockIdx.x == 127) {
 		float bp = 0.0;
 		for (int i = 0; i < SIM_MAX_LOAD-1; i++) {
@@ -184,10 +184,10 @@ __global__ void rwa (struct Vertice *d_verts, struct Edge *d_edges)
               		//printf ("Allocated: %d\nBlocked: %d\nBlock Probability: %.1f%%\n", counts[0], counts[1], bp);
 			//printf ("Block Probability [Erlang %2d]: %.1f%%\n", i, bp);
               		//printf ("Block Probability: %.1f\n", bp);
-              		printf ("%.1f\n", bp);
+              		printf ("%.1f ", bp);
 		}
         }
-*/
+
 	if (myId == stride-1) printf ("\nblockDim.x: %d\ngridDim.x: %d\nstride: %d\n\n", blockDim.x, gridDim.x, stride);
 }
 
