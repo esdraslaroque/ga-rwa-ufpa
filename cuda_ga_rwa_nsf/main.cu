@@ -62,8 +62,8 @@ __global__ void rwa (struct Vertice *d_verts, struct Edge *d_edges)
         for (int i = 0; i < GA_SIZE_POP; i++)
                 individual[i].length = 0;
 
-	double until_next   = -log(1-((int)dRand(BIGN+1))/(double)((unsigned)BIGN+1))/load;
-	double holding_time = -log(1-((int)dRand(BIGN+1))/(double)((unsigned)BIGN+1));
+	double until_next   = -log(1-(dRand(BIGN+1))/(double)((unsigned)BIGN+1))/load;
+	double holding_time = -log(1-(dRand(BIGN+1))/(double)((unsigned)BIGN+1));
 
         /* Generating individuals */
         for (int i = 0; i < GA_SIZE_POP; i++) 
