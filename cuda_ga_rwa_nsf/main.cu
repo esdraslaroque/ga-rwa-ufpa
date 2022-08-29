@@ -26,7 +26,7 @@
 #include "util.cuh"
 
 __device__ int count_bp[SIM_MAX_LOAD-1];
-__device__ long long int BIGN;
+__device__ unsigned long long int BIGN;
 
 __global__ void rwa (struct Vertice *d_verts, struct Edge *d_edges)
 {
