@@ -4,7 +4,7 @@
 
 __device__ curandStateXORWOW_t state;
 
-__device__ double dRand()
+__device__ double kRand()
 {
     unsigned long long int BIGNN = 2147483647;
     int tId = (blockDim.x * blockIdx.x) + threadIdx.x;
@@ -13,3 +13,10 @@ __device__ double dRand()
     return (BIGNN+1) * curand_uniform(&state);
 }
 
+__device__ double dRand(int max)
+{
+    int tId = (blockDim.x * blockIdx.x) + threadIdx.x;
+    curand_init((unsigned long long)clock() + tId, 0, 0, &state);
+
+    return max * curand_uniform(&state);
+}
