@@ -63,7 +63,7 @@ __global__ void rwa (struct Vertice *d_verts, struct Edge *d_edges)
         for (int i = 0; i < GA_SIZE_POP; i++)
                 individual[i].length = 0;
 	
-	unsigned long long int BIGNe = 2147483647;
+	unsigned long long int BIGNe = -2147483647;
 	double until_next   = -log(1-((int)dRand(BIGNe+1))/(double)((unsigned)BIGNe+1))/load;
 	double holding_time = -log(1-((int)dRand(BIGNe+1))/(double)((unsigned)BIGNe+1));
 
