@@ -3,7 +3,7 @@
 #include "util.cuh"
 
 __device__ curandStateXORWOW_t state;
-__device__ unsigned long long int BIGN = 2147483647;
+__device__ unsigned long long int BIGNN = 2147483647;
 
 __device__ double dRand(int max)
 {
@@ -12,6 +12,6 @@ __device__ double dRand(int max)
     int tId = (blockDim.x * blockIdx.x) + threadIdx.x;
     curand_init((unsigned long long)clock() + tId, 0, 0, &state);
 
-    return BIGN * curand_uniform(&state);
+    return (BIGNN+1) * curand_uniform(&state);
 }
 
