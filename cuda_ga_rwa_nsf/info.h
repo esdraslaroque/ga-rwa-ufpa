@@ -4,7 +4,7 @@
 
 #define FALSE 			0
 #define TRUE  			1
-#define unsigned long long int BIGN			2147483647	// RAND_MAX
+//#define BIGN			-2147483647	// RAND_MAX
 
 #define BY_LENGTH 		0
 #define BY_WL_AVAIL 		1

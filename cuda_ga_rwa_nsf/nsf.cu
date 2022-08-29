@@ -4,6 +4,8 @@
 #include "nsf.h"
 #include "info.h"
 
+unsigned long long int BIGN = 2147483647;
+
 __device__ void resetNsfVisited (struct Vertice* verts, int V)
 {
         for (int i = 0; i < V; i++)
