@@ -11,6 +11,6 @@ __device__ double dRand(int max)
     int tId = (blockDim.x * blockIdx.x) + threadIdx.x;
     curand_init((unsigned long long)clock() + tId, 0, 0, &state);
 
-    return max * curand_uniform(&state);
+    return -(max) * curand_uniform(&state);
 }
 
