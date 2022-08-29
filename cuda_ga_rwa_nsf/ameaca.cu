@@ -9,7 +9,6 @@
 #include "util.cuh"
 
 __device__ int count[SIM_MAX_LOAD-1];
-__device__ unsigned long long int BIGNN = 2147483647;
 
 __global__ void ameaca ()
 {
