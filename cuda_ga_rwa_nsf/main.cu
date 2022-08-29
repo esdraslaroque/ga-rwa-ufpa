@@ -26,7 +26,7 @@
 #include "util.cuh"
 
 __device__ int count_bp[SIM_MAX_LOAD-1];
-__device__ long long int BIGN = 2147483647;
+__device__ long long int BIGN;
 
 __global__ void rwa (struct Vertice *d_verts, struct Edge *d_edges)
 {
@@ -63,6 +63,7 @@ __global__ void rwa (struct Vertice *d_verts, struct Edge *d_edges)
         for (int i = 0; i < GA_SIZE_POP; i++)
                 individual[i].length = 0;
 	
+	BIGN = 2147483647;
 	double until_next   = -log(1-((int)dRand(BIGN+1))/(double)((unsigned)BIGN+1))/load;
 	double holding_time = -log(1-((int)dRand(BIGN+1))/(double)((unsigned)BIGN+1));
 
