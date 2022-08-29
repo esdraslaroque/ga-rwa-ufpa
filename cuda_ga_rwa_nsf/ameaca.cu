@@ -16,11 +16,10 @@ __global__ void ameaca ()
 
     // double until_next   = -log(1-((int)dRand(BIGN+1))/(double)((unsigned)BIGN+1))/load;
 	// double holding_time = -log(1-((int)dRand(BIGN+1))/(double)((unsigned)BIGN+1));
-    unsigned long long int BIGNN = 2147483647;
 
     if (blockIdx.x == 1) {
         if (threadIdx.x == 1) { printf ("BIGN: %d\n", BIGNN+1); }
-        printf ("%d\n", (int)dRand(BIGNN+1));
+        printf ("%d\n", (int)dRand());
 
     }
 }
