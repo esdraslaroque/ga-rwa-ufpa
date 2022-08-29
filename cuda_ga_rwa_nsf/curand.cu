@@ -5,7 +5,7 @@
 __device__ curandStateXORWOW_t state;
 __device__ unsigned long long int BIGNN = 2147483647;
 
-__device__ double dRand(int max)
+__device__ double dRand()
 {
     //curandState state;
     //curandStateXORWOW_t state;
