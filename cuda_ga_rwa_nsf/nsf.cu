@@ -4,7 +4,7 @@
 #include "nsf.h"
 #include "info.h"
 
-__device__ unsigned long long int BIGN = 2147483647;
+__device__ unsigned long long int BIGN = -2147483647;
 
 __device__ void resetNsfVisited (struct Vertice* verts, int V)
 {
