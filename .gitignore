@@ -1,2 +1,4 @@
 *.o
-sim_cudarwa
+sim_*
+*/sim_*
+*/*.o
