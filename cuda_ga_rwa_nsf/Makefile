@@ -5,8 +5,8 @@ CC	= nvcc
 CFLAGS	= -arch=sm_21 -Wno-deprecated-gpu-targets -O2 -I/home/esdras/NVIDIA_CUDA-8.0_Samples/common/inc/
 LIBS	= -lm -lcurand
 DEPS	= info.h
-OBJ		= main.o nsf.o rwa.o curand.o
-# OBJ		= ameaca.o curand.o
+#OBJ		= main.o nsf.o rwa.o curand.o
+OBJ		= ameaca.o curand.o
 #OBJ	= main.o nsf.o curand.o
 TARGET	= sim_cudarwa
 
