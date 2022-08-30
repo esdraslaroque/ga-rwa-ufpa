@@ -19,7 +19,7 @@ __global__ void ameaca ()
 
     if (blockIdx.x == 1) {
         // if (threadIdx.x == 1) { printf ("BIGN: %d\n", BIGN+1); }
-        printf ("%d\n", (int)dRand());
+        printf ("%d\n", (int)kRand());
 
     }
 }
