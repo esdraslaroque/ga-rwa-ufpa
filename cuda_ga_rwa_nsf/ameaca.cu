@@ -18,7 +18,7 @@ __global__ void ameaca ()
 	// double holding_time = -log(1-((int)dRand(BIGN+1))/(double)((unsigned)BIGN+1));
 
     if (blockIdx.x == 1) {
-        if (threadIdx.x == 1) { printf ("BIGN: %d\n", BIGN+1); }
+        // if (threadIdx.x == 1) { printf ("BIGN: %d\n", BIGN+1); }
         printf ("%d\n", (int)dRand());
 
     }
